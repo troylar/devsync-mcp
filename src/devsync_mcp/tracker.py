@@ -19,11 +19,12 @@ class MergeTracker:
         self.merges_path = merges_path or DEFAULT_MERGES_PATH
         self.merges_path.parent.mkdir(parents=True, exist_ok=True)
 
-    def _load(self) -> dict:
+    def _load(self) -> dict[str, list[dict[str, str]]]:
         if not self.merges_path.exists():
             return {"merges": [], "backups": []}
         with open(self.merges_path, "r", encoding="utf-8") as f:
-            return json.load(f)
+            result: dict[str, list[dict[str, str]]] = json.load(f)
+            return result
 
     def _save(self, data: dict) -> None:
         with open(self.merges_path, "w", encoding="utf-8") as f:
