@@ -1,6 +1,5 @@
 """Tests for merge tracker persistence."""
 
-from datetime import datetime
 from pathlib import Path
 
 from devsync_mcp.models import BackupRecord, MergeRecord, MergeStatus

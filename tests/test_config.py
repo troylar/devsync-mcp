@@ -1,7 +1,14 @@
 """Tests for config type detection."""
 
-from devsync_mcp.config import ConfigType, detect_config_type, expand_target_path, get_default_target, is_platform_relevant
 from pathlib import Path
+
+from devsync_mcp.config import (
+    ConfigType,
+    detect_config_type,
+    expand_target_path,
+    get_default_target,
+    is_platform_relevant,
+)
 
 
 class TestDetectConfigType:

@@ -41,7 +41,7 @@ devsync-mcp = "devsync_mcp.server:main"
 
 [project.urls]
 Homepage = "https://github.com/troylar/devsync-mcp"
-Documentation = "https://github.com/troylar/devsync-mcp#readme"
+Documentation = "https://devsync.readthedocs.io/en/latest/mcp-server/"
 Repository = "https://github.com/troylar/devsync-mcp"
 Issues = "https://github.com/troylar/devsync-mcp/issues"
 

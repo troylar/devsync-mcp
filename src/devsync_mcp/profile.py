@@ -5,8 +5,8 @@ from pathlib import Path
 from typing import Optional
 
 import yaml
-
 from devsync.core.git_operations import GitOperations
+
 from devsync_mcp.config import ConfigType, detect_config_type
 from devsync_mcp.models import ProfileConfig, TeamProfile
 
@@ -139,8 +139,10 @@ class ProfileManager:
 
         configs = []
         for cfg_data in data.get("configs", []):
-            config_type = ConfigType(cfg_data.get("type", "custom")) if "type" in cfg_data else detect_config_type(
-                cfg_data.get("target", cfg_data.get("file", ""))
+            config_type = (
+                ConfigType(cfg_data.get("type", "custom"))
+                if "type" in cfg_data
+                else detect_config_type(cfg_data.get("target", cfg_data.get("file", "")))
             )
             configs.append(
                 ProfileConfig(

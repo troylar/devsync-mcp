@@ -2,7 +2,6 @@
 
 from pathlib import Path
 
-from devsync_mcp.config import ConfigType
 from devsync_mcp.scanner import EnvironmentScanner
 
 

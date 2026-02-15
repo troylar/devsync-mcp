@@ -5,7 +5,7 @@ import logging
 from pathlib import Path
 from typing import Optional
 
-from devsync_mcp.models import BackupRecord, MergeRecord, MergeStatus
+from devsync_mcp.models import BackupRecord, MergeRecord
 
 logger = logging.getLogger(__name__)
 
